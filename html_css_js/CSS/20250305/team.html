@@ -12,14 +12,20 @@
       table {
         width: 100%;
       }
-
       .saleReportTitle {
         text-align: center;
         display: block;
       }
-
       .salesReport {
         border: 1ch;
+      }
+      .imageUploadFail {
+        font-size: xx-small;
+        display: inline;
+      }
+
+      .inline {
+        display: inline;
       }
     </style>
   </head>
@@ -27,10 +33,10 @@
     <div>
       <fieldset>
         <legend>이미지 업로드</legend>
-        <div style="text-align: left">
-          <p>상품 이미지:</p>
-          <button>파일 선택</button>
-          <p style="font-size: xx-small">선택된 파일 없음</p>
+        <div>
+          <p class="inline">상품 이미지:</p>
+          <button class="inline">파일 선택</button>
+          <p class="imageUploadFail">선택된 파일 없음</p>
         </div>
 
         <p>
