@@ -1,0 +1,7 @@
+.flex-container {
+  height: 700px;
+  background-color: #fffab7;
+
+  /* 해당 요소를 flex 컨테이너로 지정 */
+  display: flex;
+}
