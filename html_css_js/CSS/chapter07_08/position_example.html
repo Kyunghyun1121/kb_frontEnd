@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 30px;
+        border: 3px solid black;
+        width: 500px;
+        height: 300px;
+        position: relative;
+      }
+
+      .container-2 {
+        margin: 30px;
+        border: 3px solid black;
+        width: 777px;
+        height: 333px;
+        position: relative;
+      }
+
+      .container-3 {
+        margin: 30px;
+        border: 3px solid black;
+        width: 777px;
+        height: 333px;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      }
+
+      .circle {
+        width: 50px;
+        height: 50px;
+        border: 2px solid grey;
+        border-radius: 50%;
+
+        font-size: 36px;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container > div:nth-child(1) {
+        background-color: red;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+      .container > div:nth-child(2) {
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      .container > div:nth-child(3) {
+        background-color: green;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+      .container > div:nth-child(4) {
+        background-color: yellow;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+      .container > div:nth-child(5) {
+        background-color: purple;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        margin-left: -37.5px;
+        margin-top: -37.5px;
+
+        transform: translate(-50%, -50%);
+      }
+
+      #target {
+        width: 93px;
+        height: 73px;
+        background-color: hotpink;
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        margin: auto;
+      }
+
+      #target3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nisi,
+      nihil iure sint quia ex velit quibusdam reprehenderit consectetur dolores
+      voluptas provident veniam quae qui distinctio quo quisquam natus excepturi
+      vitae magnam ab? Inventore alias quam veritatis itaque, reiciendis
+      consequuntur optio facere repellendus, ullam quas, excepturi sunt error
+      in. Aspernatur sed, fuga suscipit eligendi commodi, in nam officiis
+      impedit laboriosam aperiam quasi a ut id rerum labore doloribus quibusdam
+      architecto quisquam! Consequatur libero, ex quae cupiditate, dolore sed
+      ratione suscipit fuga nam alias doloribus adipisci sunt? Officiis,
+      voluptate, sed qui eum quis vitae obcaecati rem itaque vel similique
+      aliquam temporibus.
+    </p>
+
+    <div class="container">
+      <div class="circle">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
+      <div class="circle">5</div>
+    </div>
+
+    <hr />
+    <div class="container-2">
+      <div id="target"></div>
+    </div>
+
+    <hr />
+    <div class="container-3">
+      <div id="target3"></div>
+    </div>
+  </body>
+</html>
