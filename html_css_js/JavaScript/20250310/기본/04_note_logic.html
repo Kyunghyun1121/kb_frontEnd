@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let time = new Date();
+      console.log(time);
+      let month = time.getMonth();
+      let out;
+
+      if (month >= 3 && month <= 5) out = '봄입니다.';
+      else if (month >= 6 && month <= 8) out = '여름입니다.';
+      else if (month >= 9 && month <= 11) out = '가을입니다.';
+      else out = '겨울입니다.';
+
+      alert(out);
+    </script>
+  </head>
+  <body></body>
+</html>
