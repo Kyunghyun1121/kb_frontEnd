@@ -7,7 +7,7 @@
     <script>
       let time = new Date();
       console.log(time);
-      let month = time.getMonth();
+      let month = time.getMonth() + 1;
       let out;
 
       if (month >= 3 && month <= 5) out = '봄입니다.';
@@ -17,6 +17,11 @@
 
       alert(out);
     </script>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
   </head>
   <body></body>
 </html>
