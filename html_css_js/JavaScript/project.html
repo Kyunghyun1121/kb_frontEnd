@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let answerList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      let quizData = [
+        {
+          question: 'HTML의 의미로 옳은 것은?',
+          options: [
+            '① HyperText Markup Language',
+            '② HyperText Makeup Language',
+            '③ HighText Machine Language',
+            '④ HyperTransfer Markup Language',
+          ],
+          answer: 1,
+        },
+        {
+          question: 'CSS의 주요 역할로 가장 적합한 것은?',
+          options: [
+            '① 웹페이지의 구조를 설계',
+            '② 웹페이지의 콘텐츠 작성',
+            '③ 웹페이지의 스타일 및 레이아웃 설정',
+            '④ 데이터베이스 관리',
+          ],
+          answer: 3,
+        },
+        {
+          question:
+            '자바스크립트에서 변수를 선언할 때 사용하는 키워드가 아닌 것은?',
+          options: ['① let', '② const', '③ var', '④ int'],
+          answer: 4,
+        },
+        {
+          question: '다음 중 HTML에서 제목을 나타낼 때 사용하는 태그는?',
+          options: ['① <p>', '② <h1>', '③ <div>', '④ <span>'],
+          answer: 2,
+        },
+        {
+          question: 'CSS에서 외부 스타일시트를 연결하는 올바른 방법은?',
+          options: [
+            "① <link rel='stylesheet' href='style.css'>",
+            "② <style src='style.css'></styl>",
+            "③ <stylesheet href='style.css'></stylesheet>",
+            "④ <script src='style.css'><\/script>",
+          ],
+          answer: 1,
+        },
+        {
+          question:
+            '자바스크립트에서 엄격한 비교(strict equality)를 수행하는 연산자는 무엇인가?',
+          options: ['① ==', '② ===', '③ =', '④ !=='],
+          answer: 2,
+        },
+        {
+          question: '다음 중 HTML에서 링크를 만드는 태그는 무엇인가?',
+          options: ['① <img>', '② <a>', '③ <link>', '④ <href>'],
+          answer: 2,
+        },
+        {
+          question: 'CSS에서 텍스트를 가운데 정렬할 때 사용하는 속성 값은?',
+          options: [
+            '① text-align: center;',
+            '② vertical-align: center;',
+            '③ align-text: center;',
+            '④ text-style: center;',
+          ],
+          answer: 1,
+        },
+        {
+          question: '자바스크립트에서 배열(Array)의 길이를 반환하는 속성은?',
+          options: ['① .size', '② .count', '③ .length', '④ .index'],
+          answer: 3,
+        },
+        {
+          question: 'HTML에서 순서 없는 목록을 나타내는 태그는?',
+          options: ['① <ol>', '② <ul>', '③ <li>', '④ <dl>'],
+          answer: 2,
+        },
+      ];
+
+      function check() {
+        let sum = 0;
+        let question = document.querySelectorAll('문제');
+        for (let i = 0; i < 10; i++) {
+          console.log(quizData[i].answer + ' ' + answerList[i]);
+          if (quizData[i].answer == answerList[i]) {
+            sum++;
+            question[i].style.color = 'blue';
+          } else {
+            question[i].style.color = 'red';
+          }
+        }
+        return sum * 10;
+      }
+
+      function click(num, answer) {
+        answerList[num] = answer;
+      }
+
+      console.log(check());
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let button = document.getElementById('btn');
+        button.addEventListener('click', function () {
+          let check = document.getElementsByName('food');
+
+          let liked = '좋아하는 음식들은 ';
+          for (let i = 0; i < check.length; i++) {
+            if (check[i].checked) liked += check[i].value + ' ';
+          }
+
+          let checkV2 = document.querySelectorAll('[name=food]:checked');
+          let likedV2 = '좋아하는 음식들은 ';
+          for (let i of checkV2) likedV2 += i.value + ' ';
+
+          liked += '입니다.';
+          console.log(liked);
+          console.log(likedV2);
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      좋아하는 음식은?
+      <label><input type="checkbox" name="food" value="라면" />라면</label>
+      <label><input type="checkbox" name="food" value="만두" />만두</label>
+      <label><input type="checkbox" name="food" value="불고기" />불고기</label>
+      <input id="btn" type="button" value="전송" />
+    </div>
+  </body>
+</html>
