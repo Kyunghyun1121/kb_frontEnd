@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: 'DungGeunMo';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff')
+          format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'DungGeunMo';
+        font-size: xx-large;
+        background-color: palegreen;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #start {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div><h1 id="title">흥미진진 Front End 퀴즈</h1></div>
+      <br />
+      <br />
+      <div><button id="start">시작</button></div>
+    </div>
+
+    <script>
+      let button = document.getElementById('start');
+      button.onclick = () => {
+        window.location.href = `test.html`;
+      };
+    </script>
+  </body>
+</html>
