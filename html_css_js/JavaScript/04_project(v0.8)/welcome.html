@@ -29,9 +29,9 @@
         justify-content: center;
         align-items: center;
       }
-      div {
+      #container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
       }
@@ -40,14 +40,23 @@
         width: 200px;
         height: 100px;
       }
+
+      #nameLis {
+        align-items: baseline;
+      }
     </style>
   </head>
   <body>
-    <div>
-      <div><h1 id="title">흥미진진 Front End 퀴즈</h1></div>
-      <br />
-      <br />
-      <div><button id="start">시작</button></div>
+    <div id="container">
+      <div id="nameList">
+        <div>임형섭, 이유진, 안세영, 김에영, 노경현</div>
+      </div>
+      <div>
+        <div><h1 id="title">흥미진진 Front End 퀴즈</h1></div>
+        <br />
+        <br />
+        <div><button id="start">시작</button></div>
+      </div>
     </div>
 
     <script>
