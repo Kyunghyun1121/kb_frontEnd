@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>남은 시간 타이머</title>
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const start = new Date();
+        start.setHours(9, 0, 0, 0);
+        const end = new Date();
+        end.setHours(17, 51, 0, 0);
+
+        let remainingTime = end - now;
+
+        let hours = Math.floor(remainingTime / (1000 * 60 * 60));
+
+        remainingTime -= hours * 10 * 1000 * 60;
+        hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        const minutes = Math.floor(
+          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        document.getElementById(
+          'app'
+        ).innerText = `남은 시간:\n ${hours}시간 ${minutes}분 ${seconds}초`;
+      }
+
+      setInterval(updateTime, 1000);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {};
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
