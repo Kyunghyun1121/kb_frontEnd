@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input History</title>
+    <style>
+      td {
+        padding: 5px;
+        border: 1px solid #ddd;
+        word-break: break-all;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .input,
+      .history {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 45%;
+      }
+
+      .textBox {
+        width: 200px;
+        padding: 5px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+
+      .button {
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #45a049;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 5px;
+        border: 1px solid #ddd;
+      }
+
+      .contentBox {
+        width: 80%;
+      }
+
+      button {
+        padding: 5px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="body">
+      <span class="input">
+        <h3>입력</h3>
+        <input
+          type="text"
+          class="textBox"
+          v-model.trim="newContent"
+          @keyup.exact.enter="addContent"
+        />
+        <input type="button" value="입력" class="button" @click="addContent" />
+      </span>
+      <span class="history">
+        <h3>history</h3>
+        <table>
+          <tbody>
+            <tr v-for="(content, index) in contents">
+              <td class="contentBox">{{content}}</td>
+              <td><button @click="deleteContent(index)">삭제</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </span>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const inputText = {
+        contents: [],
+        newContent: '',
+      };
+
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return inputText;
+        },
+        methods: {
+          addContent() {
+            this.contents.unshift(this.newContent);
+            this.newContent = '';
+          },
+          deleteContent(i) {
+            this.contents.splice(i, 1);
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
