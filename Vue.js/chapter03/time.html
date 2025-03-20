@@ -7,17 +7,18 @@
     <script>
       function updateTime() {
         const now = new Date();
-        const start = new Date();
-        start.setHours(9, 0, 0, 0);
         const end = new Date();
         end.setHours(17, 51, 0, 0);
 
         let remainingTime = end - now;
+        if (now.getHours() < 12) {
+          remainingTime -= 1000 * 60 * 60;
+        }
+        remainingTime -= Math.floor(
+          (remainingTime / (1000 * 60 * 60)) * 600000
+        );
 
-        let hours = Math.floor(remainingTime / (1000 * 60 * 60));
-
-        remainingTime -= hours * 10 * 1000 * 60;
-        hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        const hours = Math.floor(remainingTime / (1000 * 60 * 60));
         const minutes = Math.floor(
           (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
         );
