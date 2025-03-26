@@ -10,7 +10,7 @@
 <script>
 import InputName from './components/InputName.vue';
 export default {
-  name: 'App',
+  name: 'App4',
   components: { InputName },
   data() {
     return {
@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     nameChangedHandler(e) {
+      console.log(e.name);
       this.parentName = e.name;
     },
   },
