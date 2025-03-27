@@ -9,7 +9,7 @@
           name="msg"
           placeholder="할일을 여기에 입력!"
           v-model.trim="todo"
-          @keyup.enter="addTodo"
+          @keyup.enter="addHandler"
         />
 
         <!-- 추가 버튼 클릭 시 작성된 할 일 내용을 todolist에 추가 -->
@@ -24,8 +24,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const name = 'InputTodo';
-let todo = ref('');
+const todo = ref('');
 const emit = defineEmits(['addTodo']);
 
 const addHandler = () => {

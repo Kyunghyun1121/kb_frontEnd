@@ -65,6 +65,7 @@ const addTodo = (receiveTodo) => {
     completed: false,
   });
 };
+
 //     /* 할 일 완료 여부 변경 메서드 */
 const toggleCompleted = (id) => {
   let index = state.todolist.findIndex((item) => id === item.id);

@@ -8,7 +8,7 @@
         <!-- 할일 목록 요소 -->
         <!-- TodoItem -> TodoList -> App -->
         <TodoListItem
-          v-for="todo in props.todolist"
+          v-for="todo in todolist"
           :todoItem="todo"
           @toggle-completed="$emit('toggle-completed', $event)"
           @delete-todo="$emit('delete-todo', $event)"
@@ -21,8 +21,6 @@
 
 <script setup>
 import TodoListItem from './TodoListItem.vue';
-
-const name = 'TodoList';
 
 //부모로 부터 전달받은 데이터를 수신하면서 유효성 검사를 진행한다.
 const props = defineProps({

@@ -7,14 +7,14 @@
     <input
       type="checkbox"
       class="pointer me-3"
-      v-model="props.todoItem.completed"
-      @click="toggleCompletedHandler(props.todoItem.id)"
+      v-model="todoItem.completed"
+      @click="toggleCompletedHandler(todoItem.id)"
     />
 
     <!-- todoitem.completed 값이 true이면 
                    'todo-done' 클래스, '(완료') 문자열 추가 -->
-    <span class="pointer" :class="{ 'todo-done': props.todoItem.completed }">
-      {{ props.todoItem.todo }} {{ props.todoItem.completed ? '(완료)' : '' }}
+    <span class="pointer" :class="{ 'todo-done': todoItem.completed }">
+      {{ todoItem.todo }} {{ todoItem.completed ? '(완료)' : '' }}
     </span>
 
     <!-- 
@@ -23,7 +23,7 @@
     -->
     <span
       class="float-end badge bg-secondary pointer"
-      @click.stop="emit('delete-todo', props.todoItem.id)"
+      @click.stop="emit('delete-todo', todoItem.id)"
     >
       삭제
     </span>
@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-const name = 'TodoListitem';
 const props = defineProps({
   todoItem: { type: Object, required: true },
 });

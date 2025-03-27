@@ -22,7 +22,6 @@
 <script setup>
 import { computed } from 'vue';
 
-const name = 'TodoCount';
 const props = defineProps({
   //데이터의 형식과 유무를 정하여 유효성 검사
   todolist: { type: Array, required: true },
