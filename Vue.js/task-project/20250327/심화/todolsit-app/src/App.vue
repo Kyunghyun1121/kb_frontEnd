@@ -9,14 +9,14 @@
     <div class="card-body">
       <InputTodo @addTodo="addTodo" />
       <!-- 카운트 컴포넌트 -->
-      <TodoCount :todolist="sortedList" />
+      <TodoCount :todoList="sortedList" />
 
       <!-- 목록 컴포넌트  
         - 목록 화면 랜더링에 필요한 데이터 todolist를 부모가 가지고 있음 
         부모 -> 자식 데이터 전달 : props 이용 -> v-bind: 전달할 이름="데이터"
       -->
       <TodoList
-        :todolist="sortedList"
+        :todoList="sortedList"
         @toggle-completed="toggleCompleted"
         @delete-todo="deleteTodo"
       />
@@ -31,25 +31,25 @@ import TodoList from './components/TodoList.vue';
 import TodoCount from './components/TodoCount.vue';
 import { computed, onMounted, reactive } from 'vue';
 
-const state = reactive({ todolist: [] });
+const state = reactive({ todoList: [] });
 
 onMounted(() => {
-  state.todolist.push({
+  state.todoList.push({
     id: Date.now(),
     todo: '자전거 타기',
     completed: false,
   });
-  state.todolist.push({
+  state.todoList.push({
     id: Date.now() + 1,
     todo: '딸과 공원 산책',
     completed: true,
   });
-  state.todolist.push({
+  state.todoList.push({
     id: Date.now() + 2,
     todo: '일요일 애견 카페',
     completed: false,
   });
-  state.todolist.push({
+  state.todoList.push({
     id: Date.now() + 3,
     todo: 'Vue 원고 집필',
     completed: false,
@@ -59,7 +59,7 @@ onMounted(() => {
 const addTodo = (receiveTodo) => {
   //InputTodo 컴포넌트의
   // this.$emit('add-todo', this.todo); 에서 전달된 this.todo
-  state.todolist.push({
+  state.todoList.push({
     id: Date.now(),
     todo: receiveTodo,
     completed: false,
@@ -68,15 +68,15 @@ const addTodo = (receiveTodo) => {
 
 //     /* 할 일 완료 여부 변경 메서드 */
 const toggleCompleted = (id) => {
-  let index = state.todolist.findIndex((item) => id === item.id);
-  state.todolist[index].completed = !state.todolist[index].completed;
+  let index = state.todoList.findIndex((item) => id === item.id);
+  state.todoList[index].completed = !state.todoList[index].completed;
 };
 
 //     /* 할 일 삭제 메서드 */
 const deleteTodo = (id) => {
   // 배열.findIndex(콜백함수) : 콜백 함수의 결과가 true인 index를 반환
-  let index = state.todolist.findIndex((item) => id === item.id);
-  state.todolist.splice(index, 1);
+  let index = state.todoList.findIndex((item) => id === item.id);
+  state.todoList.splice(index, 1);
 };
 
 //   //data가 변할 때 감지한다.
@@ -84,7 +84,7 @@ const deleteTodo = (id) => {
 
 // 정렬
 const sortedList = computed(() => {
-  state.todolist.sort((t1, t2) => {
+  state.todoList.sort((t1, t2) => {
     // true > false  -> 결과 : true
     if (t1.completed > t2.completed) {
       return 1; // 양수 반환 시 자리 바뀜 (t1, t2 -> t2, t1)
@@ -107,6 +107,6 @@ const sortedList = computed(() => {
   });
 
   // 정렬된 todoList 반환
-  return state.todolist;
+  return state.todoList;
 });
 </script>
