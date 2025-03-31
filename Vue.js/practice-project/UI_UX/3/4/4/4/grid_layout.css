@@ -1,0 +1,59 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-row: 1rem;
+  grid-column: 1rem;
+}
+
+.column-xs-1 {
+  grid-column-start: span 1;
+  grid-column-end: span 1;
+}
+.column-xs-2 {
+  grid-column-start: span 2;
+  grid-column-end: span 2;
+}
+.column-xs-3 {
+  grid-column-start: span 3;
+  grid-column-end: span 3;
+}
+.column-xs-4 {
+  grid-column-start: span 4;
+  grid-column-end: span 4;
+}
+.column-xs-5 {
+  grid-column-start: span 5;
+  grid-column-end: span 5;
+}
+.column-xs-6 {
+  grid-column-start: span 6;
+  grid-column-end: span 6;
+}
+.column-xs-7 {
+  grid-column-start: span 7;
+  grid-column-end: span 7;
+}
+.column-xs-8 {
+  grid-column-start: span 8;
+  grid-column-end: span 8;
+}
+.column-xs-9 {
+  grid-column-start: span 9;
+  grid-column-end: span 9;
+}
+.column-xs-10 {
+  grid-column-start: span 10;
+  grid-column-end: span 10;
+}
+.column-xs-11 {
+  grid-column-start: span 11;
+  grid-column-end: span 11;
+}
+.column-xs-12 {
+  grid-column-start: span 12;
+  grid-column-end: span 12;
+}
+
+@media screen and (min-wifth: 760px) {
+}

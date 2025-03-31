@@ -11,24 +11,25 @@
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavbar"
+        aria-controls="collapsibleNavbar"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <div class="collapse navbar-collapse">
         <!-- <router-link to="/electronics">
-            <li class="nav-item">가전</li>
-          </router-link>
-          <router-link to="/jewelery">
-            <li class="nav-item">주얼리</li>
-          </router-link>
-          <router-link to="/mensclothing">
-            <li class="nav-item">남성의류</li>
-          </router-link>
-          <router-link to="/womenclothing">
-            <li class="nav-item">여성의류</li>
-          </router-link> -->
-        <MenuGroup />
+          <li class="nav-item">가전</li>
+        </router-link>
+        <router-link to="/jewelery">
+          <li class="nav-item">주얼리</li>
+        </router-link>
+        <router-link to="/mensclothing">
+          <li class="nav-item">남성의류</li>
+        </router-link>
+        <router-link to="/womenclothing">
+          <li class="nav-item">여성의류</li>
+        </router-link> -->
+        <MenuGroup id="collapsibleNavbar" />
       </div>
     </div>
   </nav>
