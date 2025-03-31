@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f6fbfa;
+}
+
+.header {
+  background-color: #24292e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header_title {
+  font-size: 1.5rem;
+}
+
+.layout {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.sidebar {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+}
+
+.sidebar_nav ul {
+  list-style: none;
+}
+.sidebar_nav li {
+  margin-bottom: 0.5rem;
+}

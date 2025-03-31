@@ -16,9 +16,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <!-- navigation - 왼쪽  -->
-        <ul class="navbar-nav me-auto">
-          <router-link to="/electronics">
+        <!-- <router-link to="/electronics">
             <li class="nav-item">가전</li>
           </router-link>
           <router-link to="/jewelery">
@@ -29,15 +27,13 @@
           </router-link>
           <router-link to="/womenclothing">
             <li class="nav-item">여성의류</li>
-          </router-link>
-        </ul>
+          </router-link> -->
+        <MenuGroup />
       </div>
     </div>
   </nav>
 </template>
 
-<script>
-export default {
-  name: 'NavBar',
-};
+<script setup>
+import MenuGroup from './menu/MenuGroup.vue';
 </script>

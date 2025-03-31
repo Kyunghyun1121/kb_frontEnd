@@ -1,12 +1,15 @@
 <template>
-  <div class="card card-body">
-    <h2>MenuItem</h2>
+  <div>
+    <router-link :to="props.menuItem.url" class="text-white">
+      <li class="nav-item">
+        <i :class="menuItem.icon"> </i>{{ menuItem.title }}
+      </li>
+    </router-link>
   </div>
 </template>
 
 <script setup>
-import menus from '@/config/index.js';
-export default {
-  name: 'MenuItem',
-};
+const props = defineProps({
+  menuItem: { type: Object, required: true },
+});
 </script>
