@@ -1,6 +1,6 @@
 <template>
   <div class="card card-body">
-    <h2>여성의류</h2>
+    <h2><i class="fa-solid fa-person-dress me-1"> </i>여성의류</h2>
   </div>
 </template>
 

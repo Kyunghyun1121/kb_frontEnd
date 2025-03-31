@@ -1,8 +1,8 @@
 <template>
   <div>
     <router-link :to="props.menuItem.url" class="text-white">
-      <li class="nav-item">
-        <i :class="menuItem.icon"> </i>{{ menuItem.title }}
+      <li class="nav-item m-1">
+        <i :class="menuItem.icon" class="me-1"> </i>{{ menuItem.title }}
       </li>
     </router-link>
   </div>
