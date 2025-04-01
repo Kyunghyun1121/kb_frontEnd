@@ -8,7 +8,7 @@
       </a>
 
       <!-- 햄버거 버튼 -->
-      <button
+      <!-- <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -18,12 +18,10 @@
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
 
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav me-auto">
-          <MenuGroup />
-          <!-- <router-link to="/electronics">
+      <MenuGroup />
+      <!-- <router-link to="/electronics">
             <li class="nav-item">가전</li>
           </router-link>
           <router-link to="/jewelery">
@@ -35,8 +33,6 @@
           <router-link to="/womenclothing">
             <li class="nav-item">여성의류</li>
           </router-link> -->
-        </ul>
-      </div>
     </div>
   </nav>
 </template>
