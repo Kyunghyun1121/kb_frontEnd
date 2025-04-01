@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <div class="container">
-      <div class="row">
-        <ul class="navbar-nav me-auto">
-          <MenuItem v-for="menu in menuGroup" :menuItem="menu" />
-        </ul>
-      </div>
+  <div class="container">
+    <div class="row">
+      <ul class="navbar-nav me-auto">
+        <MenuItem v-for="menu in menuGroup" :menuItem="menu" />
+      </ul>
     </div>
   </div>
 </template>

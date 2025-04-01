@@ -30,4 +30,7 @@ td > a {
 .navItem {
   color: white;
 }
+a {
+  text-decoration: none;
+}
 </style>
