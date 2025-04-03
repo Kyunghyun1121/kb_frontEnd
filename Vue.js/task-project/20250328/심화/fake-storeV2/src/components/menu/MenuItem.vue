@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <li>
     <router-link :to="props.menuItem.url" class="text-white m-1">
       <i :class="menuItem.icon" class="me-1"> </i>{{ menuItem.title }}
     </router-link>
-  </div>
+  </li>
 </template>
 
 <script setup>

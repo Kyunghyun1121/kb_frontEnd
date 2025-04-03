@@ -1,11 +1,12 @@
+<!-- 네비게이션 바 컴포넌트 -->
 <template>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <router-link to="/" class="text-white">
-          <i class="fa-solid fa-home"></i>Fullstack
-        </router-link>
-      </a>
+      <!-- 홈 버튼 -->
+      <router-link class="navbar-brand" to="/">
+        <i class="fa-solid fa-house"></i>
+        {{ config.title }}
+      </router-link>
 
       <!-- 메뉴 햄버거 버튼 -->
       <button
