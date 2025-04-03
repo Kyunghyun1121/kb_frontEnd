@@ -4,7 +4,7 @@
       "id": "1",
       "todo": "야구장",
       "desc": "프로야구 경기도 봐야합니다.",
-      "done": true
+      "done": false
     },
     {
       "id": "2",
@@ -15,13 +15,13 @@
     {
       "id": "3",
       "todo": "Vue 학습",
-      "desc": "Vue 학습을 해야 합니다",
+      "desc": "Vue 학습을 해야 합니다.",
       "done": false
     },
     {
       "id": "4",
       "todo": "ES6 공부",
-      "desc": "ES6 공부를 해야 합니다",
+      "desc": "ES6 공부를 해야 합니다.",
       "done": false
     }
   ]

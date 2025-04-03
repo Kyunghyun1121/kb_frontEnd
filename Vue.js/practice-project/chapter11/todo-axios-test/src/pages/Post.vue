@@ -18,6 +18,7 @@
 import axios from 'axios';
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
+import { ref, onMounted } from 'vue';
 
 const state = reactive({
   todo: {
@@ -29,11 +30,12 @@ const state = reactive({
 });
 
 const router = useRouter();
+const len = ref('4');
 
 const addTodo = async () => {
-  const length = (await axios.get('/api/todos')).data.length;
-  console.log(length);
-  state.todo.id = `${length + 1}`;
+  state.todo.id = `${parseInt(len.value) + 1}`;
+  len.value = parseInt(len.value);
+
   const response = axios.post('/api/todos', state.todo);
   const result = (await response).data;
   const id = result.id;
